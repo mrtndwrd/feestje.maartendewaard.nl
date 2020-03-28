@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    
+    .full-height {
+      height: 100%;
+    }
+  </style>
+  {%- include head.html -%}
+  <script src='https://talk.greenhost.net/external_api.js'></script>
+
+  <body>
+    {%- include header.html -%}
+    {{ content }}
+    <div class="full-height" id="meet"></div>
+  </body>
+
+</html>
