@@ -1,0 +1,11 @@
+---
+permalink: /404.html
+layout: default
+---
+
+# Ja hallo!
+
+We konden niet meer pagina's maken voor deze website. Vind je dat we nog niet
+genoeg gedaan hebben ofzo? 
+
+Ga maar lekker terug naar de [home pagina](/)
