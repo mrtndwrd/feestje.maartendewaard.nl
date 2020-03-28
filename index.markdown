@@ -47,14 +47,14 @@ met mensen te gaan praten. Een paar tips voor een zo leuk mogelijk feestje:
 <img class="map" src="assets/img/plattegrond-scaled.png" usemap="#image-map">
 <map name="image-map">
     <area target="" alt="Ga naar de Woonkamer" title="Ga naar de Woonkamer" href="/woonkamer/" coords="465,647,84,975" shape="rect">
-    <area target="" alt="Ga naar de Slaapkamer" title="Ga naar de Slaapkamer" href="https://talk.greenhost.net/MaartenEnErikaSlaapkamer" coords="358,513,563,511,562,108,415,108,413,290,264,297,259,385,357,391" shape="poly">
-    <area target="" alt="Ga naar de Keuken" title="Ga naar de Keuken" href="https://talk.greenhost.net/MaartenEnErikaKeuken" coords="88,636,169,636,171,614,249,613,252,295,93,297" shape="poly">
+    <area target="" alt="Ga naar de Slaapkamer" title="Ga naar de Slaapkamer" href="/slaapkamer/" coords="358,513,563,511,562,108,415,108,413,290,264,297,259,385,357,391" shape="poly">
+    <area target="" alt="Ga naar de Keuken" title="Ga naar de Keuken" href="/keuken/" coords="88,636,169,636,171,614,249,613,252,295,93,297" shape="poly">
 </map>
 
 Als het plaatje hierboven om de een of andere reden niet goed werkt:
 
 - [Ga naar de Woonkamer](/woonkamer/)
-- [Ga naar de Slaapkamer](https://talk.greenhost.net/MaartenEnErikaSlaapkamer)
-- [Ga naar de Keuken](https://talk.greenhost.net/MaartenEnErikaKeuken)
+- [Ga naar de Slaapkamer](/slaapkamer/)
+- [Ga naar de Keuken](/keuken/)
 
 
