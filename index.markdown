@@ -7,13 +7,27 @@ layout: home
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <!-- https://www.jqueryscript.net/other/Simple-jQuery-Plugin-For-Highlighting-Image-Map-Maphilight.html -->
-<script type="text/javascript" src="assets/js/Simple-jQuery-Plugin-For-Highlighting-Image-Map-Maphilight/jquery.maphilight.min.js"></script>
+<script type="text/javascript" src="assets/js/maphilight/jquery.maphilight.js"></script>
+<script type="text/javascript" src="assets/js/rwdImageMaps/jquery.rwdImageMaps.min.js"></script>
 <script type="text/javascript">
-$( document ).ready(function() {
-  console.log("Map object:");
-  console.log($('.map'));
-  $('.map').maphilight();
-});
+var resizeEvt;
+
+(function($) {
+
+    $(document).on('ready.usemaps', function(){
+        $('img[usemap]').maphilight();
+        $('img[usemap]').rwdImageMaps();
+    });
+
+    $(window).on('resize.usemaps', function(){
+        console.log("resize");
+        clearTimeout(resizeEvt);
+        resizeEvt = setTimeout(function(){
+            $('img[usemap]').maphilight();
+        }, 200);
+    });
+
+})(jQuery);
 </script>
 
 Hallo, dit is ons feestje! Hier is ons huis. Klik op een van de kamers om daar

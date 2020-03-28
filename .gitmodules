@@ -1,0 +1,6 @@
+[submodule "assets/js/rwdImageMaps"]
+	path = assets/js/rwdImageMaps
+	url = https://github.com/stowball/jQuery-rwdImageMaps
+[submodule "assets/js/maphilight"]
+	path = assets/js/maphilight
+	url = https://github.com/kemayo/maphilight
