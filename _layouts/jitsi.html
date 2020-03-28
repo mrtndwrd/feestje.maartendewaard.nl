@@ -12,6 +12,20 @@
   </style>
   {%- include head.html -%}
   <script src='https://talk.greenhost.net/external_api.js'></script>
+  <script type="text/javascript">
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      window.location.replace("https://talk.greenhost.net/{{ page.jitsiRoom }}");
+    } else {
+      window.onload = function() {
+        var api = new JitsiMeetExternalAPI("talk.greenhost.net", {
+          'roomName': '{{ page.jitsiRoom }}',
+          'parentNode': document.querySelector('#meet'),
+        })
+        console.log(api);
+      }
+    }
+  </script>
+
 
   <body>
     {%- include header.html -%}
