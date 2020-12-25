@@ -87,7 +87,7 @@ function getMembers($conn, $room) {
 }
 
 function getRooms($conn) {
-    cleanRooms();
+    cleanRooms($conn);
     $query = "SELECT room FROM jitsi";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
@@ -102,7 +102,7 @@ function getRooms($conn) {
 
 }
 
-function cleanRooms() {
+function cleanRooms($conn) {
     $query = 'UPDATE `jitsi` SET members = "[]" WHERE updated < NOW() - INTERVAL 10 MINUTE AND members != "[]"';
     mysqli_query($conn, $query);
 }
