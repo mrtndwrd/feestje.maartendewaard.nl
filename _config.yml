@@ -27,7 +27,7 @@ url: "https://feestje.maartendewaard.nl"  # the base hostname & protocol for you
 twitter_username:
 github_username:
 
-# Use trailing slash here!
+# MUST begin with "https://" and end with "/"
 jitsi_url: https://meet.jit.si/
 
 # Build settings
