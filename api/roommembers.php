@@ -84,10 +84,10 @@ function getMembers($conn, $room) {
     } else {
         echo "['SOMETHING WENT WRONG']";
     }
-
 }
 
 function getRooms($conn) {
+    cleanRooms();
     $query = "SELECT room FROM jitsi";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
@@ -100,6 +100,11 @@ function getRooms($conn) {
         echo "['SOMETHING WENT WRONG']";
     }
 
+}
+
+function cleanRooms() {
+    $query = 'UPDATE `jitsi` SET members = "[]" WHERE updated < NOW() - INTERVAL 10 MINUTE AND members != "[]"';
+    mysqli_query($conn, $query);
 }
 
 mysqli_close($conn);
