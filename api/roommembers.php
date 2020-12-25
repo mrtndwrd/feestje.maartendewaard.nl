@@ -1,8 +1,5 @@
 <?php
-$servername = "maarte91.sql.ghserv.net";
-$username = "maartendewaa";
-$password = "yacyehigEndoccorExCyzeQuavirg8";
-$dbname = "maartendewaard_nl_housewarming";
+require('credentials.php');
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -57,13 +54,22 @@ function setMembers($conn, $room, $members) {
             $safe_members[] = $memberHash;
         var_dump($safe_members);
     }
-    $safe_members =  preg_replace('/[^a-zA-Z\d\s:]/', '', $safe_members);
-    $safe_members = json_encode($safe_members);
-    $query = "UPDATE jitsi SET members = '$safe_members' WHERE room = '$room'";
-    if (mysqli_query($conn, $query)) {
-        echo "success";
-    } else {
-        echo "setMembers failed";
+    if (count($safe_members) > 0) {
+        if (count($safe_members) == 1) {
+            $safe_members = [];
+        }
+        $safe_members =  preg_replace('/[^a-zA-Z\d\s:]/', '', $safe_members);
+        $safe_members = json_encode($safe_members);
+        if (count($safe_members) > 0) {
+            $query = "UPDATE jitsi SET members = '$safe_members' WHERE room = '$room'";
+            if (mysqli_query($conn, $query)) {
+                echo "success";
+            } else {
+                echo "setMembers failed";
+            }
+        } else {
+            echo "not emptying room";
+        }
     }
 }
 

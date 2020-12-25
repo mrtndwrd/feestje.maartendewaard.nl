@@ -1,3 +1,4 @@
+---
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -8,7 +9,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -19,13 +20,15 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Housewarming Erika en Maarten
-email: feestje@maartendewaard.nl
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-  # this means to ignore newlines until "baseurl:"
   Online housewarming party van Maarten en Erika
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://feestje.maartendewaard.nl" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"  # the subpath of your site, e.g. /blog
+url: "https://feestje.maartendewaard.nl"  # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
+
+# Use trailing slash here!
+jitsi_url: https://meet.jit.si/
 
 # Build settings
 theme: minima

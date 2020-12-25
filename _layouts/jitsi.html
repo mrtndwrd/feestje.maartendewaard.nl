@@ -5,31 +5,31 @@
     html, body {
       height: 100%;
     }
-    
     .full-height {
       height: 100%;
     }
   </style>
   {%- include head.html -%}
-  <script src='https://talk.greenhost.net/external_api.js'></script>
+  <script src='{{ site.jitsi_url }}/external_api.js'></script>
   <script type="text/javascript">
     function setMembers() {
         postData = JSON.stringify({"members": api._participants});
         console.log(postData);
         var xhr = new XMLHttpRequest();
         xhr.open("POST",
-            'https://feestje.maartendewaard.nl/api/roommembers.php?function=setmembers&room={{ page.room }}', true);
+            '{{ site.url }}/api/roommembers.php?function=setmembers&room={{ page.room }}', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(postData);
     }
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      window.location.replace("https://talk.greenhost.net/{{ page.jitsiRoom }}");
+        window.location.replace("{{ site.jitsi_url }}{{ page.jitsiRoom }}");
     } else {
       window.onload = function() {
-        window.api = new JitsiMeetExternalAPI("talk.greenhost.net", {
-          'roomName': '{{ page.jitsiRoom }}',
-          'parentNode': document.querySelector('#meet'),
+        window.api = new JitsiMeetExternalAPI(
+          '{{ site.jitsi_url }}'.replace('https://', ''), {
+            'roomName': '{{ page.jitsiRoom }}',
+            'parentNode': document.querySelector('#meet'),
         })
       }
       setInterval(setMembers, 5000);
@@ -43,7 +43,7 @@
     <div class="full-height" id="meet"></div>
   </body>
 <footer class="h-card">
-    Als dit niet werkt, klik dan hier: <a href="https://talk.greenhost.net/{{ page.jitsiRoom }}">https://talk.greenhost.net/{{ page.jitsiRoom }}</a>
+    Als dit niet werkt, klik dan hier: <a href="{{ site.jitsi_url }}{{ page.jitsiRoom }}">{{ site.jitsi_url }}{{ page.jitsiRoom }}</a>
 </footer>
 
 </html>

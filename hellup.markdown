@@ -15,3 +15,12 @@ nodig. Hier kun je de apps downloaden:
 
 Als je de app hebt gedownload kun je op de kamers op de [home pagina](/)
 klikken. Dan kun je via de browser de app openen om mee te praten in die kamer.
+
+## Je naam instellen
+
+Wil je ook dat je naam zichtbaar is op de homepage? Dan moet je even het
+chat-schermpje openen. Daar wordt om je naam gevraagd
+
+## Muziek
+
+Jaa! je kunt meeluisteren via http://jukebox.today/feestje

@@ -4,3 +4,6 @@ _site
 .jekyll-metadata
 vendor
 *.swp
+
+# Passwords and sensitive data
+api/credentials.php
