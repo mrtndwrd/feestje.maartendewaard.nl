@@ -8,7 +8,7 @@ layout: home
 Hallo, dit is ons feestje! Hier is ons huis. Klik op een van de kamers om daar
 met mensen te gaan praten. Een paar tips voor een zo leuk mogelijk feestje:
 
-- Als er meer dan 10 mensen in 1 kamer zitten gaat Jitsi raar doen (en dan is
+- Als er meer dan 18 mensen in 1 kamer zitten gaat Jitsi raar doen (en dan is
   het gesprek sowieso niet echt meer te volgen waarschijnlijk). Dan is het het
   beste om een andere kamer in te gaan.
 - Wil je meeluisteren naar onze muziek? Ga naar
@@ -61,7 +61,7 @@ var resizeEvt;
 
 (function($) {
     function setMemberData(room, data) {
-        var list = "Aantal mensen: " + data.length + "<b>/10</b><ul>"
+        var list = "Aantal mensen: " + data.length + "<b>/18</b><ul>"
         $.each(data, function() {
             list = list + '<li>' + this + '</li>';
         })
