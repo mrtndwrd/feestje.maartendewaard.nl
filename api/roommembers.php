@@ -8,7 +8,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// $sql = "SELECT * FROM jitsi";
+// $sql = "SELECT * FROM bbnc_room_members";
 // $result = mysqli_query($conn, $sql);
 // 
 // if (mysqli_num_rows($result) > 0) {
@@ -57,7 +57,7 @@ function setMembers($conn, $room, $members) {
     $safe_members =  preg_replace('/[^a-zA-Z\d\s:]/', '', $safe_members);
     $safe_members = json_encode($safe_members);
     if (count($safe_members) > 0) {
-        $query = "UPDATE jitsi SET members = '$safe_members' WHERE room = '$room'";
+        $query = "UPDATE bbnc_room_members SET members = '$safe_members' WHERE room = '$room'";
         if (mysqli_query($conn, $query)) {
             echo "success";
         } else {
@@ -70,7 +70,7 @@ function setMembers($conn, $room, $members) {
 
 function getMembers($conn, $room) {
     $room = mysqli_real_escape_string($conn, strtolower($room));
-    $query = "SELECT members FROM jitsi WHERE room = '$room'";
+    $query = "SELECT members FROM bbnc_room_members WHERE room = '$room'";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
         // output first data row
@@ -83,7 +83,7 @@ function getMembers($conn, $room) {
 
 function getRooms($conn) {
     cleanRooms($conn);
-    $query = "SELECT room FROM jitsi";
+    $query = "SELECT room FROM bbnc_room_members";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
         // output first data row
@@ -98,7 +98,7 @@ function getRooms($conn) {
 }
 
 function cleanRooms($conn) {
-    $query = 'UPDATE `jitsi` SET members = "[]" WHERE updated < NOW() - INTERVAL 10 MINUTE AND members != "[]"';
+    $query = 'UPDATE `bbnc_room_members` SET members = "[]" WHERE updated < NOW() - INTERVAL 20 SECOND AND members != "[]"';
     mysqli_query($conn, $query);
 }
 
