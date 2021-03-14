@@ -1,0 +1,9 @@
+.site-header {
+    background-color: $brand-color;
+    text-color: $site-title-color;
+    .site-nav {
+        a {
+            color: $site-title-color;
+        }
+    }
+}

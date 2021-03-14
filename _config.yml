@@ -19,9 +19,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Housewarming Erika en Maarten
+title: Digitaal Kantoor BBNC
 description: >-  # this means to ignore newlines until "baseurl:"
-  Online housewarming party van Maarten en Erika
+  Digitaal kantoor van BBNC
 baseurl: "/"  # the subpath of your site, e.g. /blog
 url: "https://digitaalkantoor.maartendewaard.nl"  # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
