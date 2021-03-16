@@ -10,8 +10,7 @@ Dit is ons digitale kantoor. Een paar handigheidjes:
 - De kamers werken met Jitsi, dat werkt op je computer het beste in Chrome (of
   Chromium). Zeker als je met meer dan drie personen wilt praten werken andere
   browsers heel slecht.
-- Als je op je telefoon of tablet zit, moet je de Jitsi app installeren. [Klik
-  hier voor meer informatie](hellup#app-instellen)
+- Als je op je telefoon of tablet zit, moet je de Jitsi app installeren.
 - Als er meer dan 16 mensen in 1 kamer zitten gaat Jitsi raar doen (en dan is
   het gesprek sowieso niet echt meer te volgen waarschijnlijk). Dan is het het
   beste om een andere kamer in te gaan. Onderaan deze pagina kun je zien wie
