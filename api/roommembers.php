@@ -56,7 +56,7 @@ function setMembers($conn, $room, $members) {
     }
     $safe_members =  preg_replace('/[^a-zA-Z\d\s:]/', '', $safe_members);
     $safe_members = json_encode($safe_members);
-    if (count($safe_members) > 0) {
+    if (strlen($safe_members) > 0) {
         $query = "UPDATE jitsi SET members = '$safe_members' WHERE room = '$room'";
         if (mysqli_query($conn, $query)) {
             echo "success";
